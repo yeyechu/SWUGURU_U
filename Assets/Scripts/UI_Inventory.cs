@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using CodeMonkey.Utils;
 
 public class UI_Inventory : MonoBehaviour
 {
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
+    private GameObject player;
 
     private void Awake()
     {
         itemSlotContainer = transform.Find("itemSlotcontainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
+        player = GameObject.Find("Player");
     }
 
     public void SetInventory(Inventory inventory)
@@ -46,6 +49,20 @@ public class UI_Inventory : MonoBehaviour
             //인벤토리 배치
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
+
+            /*아이템사용
+            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
+            {
+
+            };*/
+            //우클릭시 아이템버리기
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>
+            {
+                inventory.RemoveItem(item);
+                ItemWorld.DropItem(player.transform.position, item);
+            };
+
+
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             //아이템 이미지 불러오기
             Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();

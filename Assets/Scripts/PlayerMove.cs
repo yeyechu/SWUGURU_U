@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     float speed = 5;
+
     //인벤토리
     private Inventory inventory;
 
@@ -16,9 +17,6 @@ public class PlayerMove : MonoBehaviour
         //인벤토리
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
-        
-        //아이템 배치
-        ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Items { itemType = Items.ItemType.Egg, amount = 1 });
     }
 
     //아이템 먹기

@@ -26,6 +26,12 @@ public class Inventory
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
+    public void RemoveItem(Items item)
+    {
+        itemList.Remove(item);
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
+    }
+
     public List<Items> GetItemList()
     {
         return itemList;

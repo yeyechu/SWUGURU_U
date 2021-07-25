@@ -14,6 +14,13 @@ public class ItemWorld : MonoBehaviour
         return itemWorld;
     }
 
+    public static ItemWorld DropItem(Vector3 dropPosition, Items item)
+    {
+        ItemWorld itemWorld = SpawnItemWorld(dropPosition, item);
+        itemWorld.GetComponent<Rigidbody2D>();
+        return itemWorld;
+    }
+
     private Items item;
     private SpriteRenderer spriteRenderer;
 
