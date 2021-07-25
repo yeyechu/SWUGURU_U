@@ -8,12 +8,14 @@ public class PlayerMove : MonoBehaviour
     //인벤토리
     private Inventory inventory;
 
+    [SerializeField] private UI_Inventory uiInventory;
 
     
     private void Awake()
     {
         //인벤토리
         inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
     }
 
     void Update()
