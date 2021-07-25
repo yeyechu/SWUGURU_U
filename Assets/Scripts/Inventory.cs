@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory
 {
+    public event EventHandler OnItemListChanged;
+
     private List<Items> itemList;
 
     public Inventory()
@@ -15,12 +18,12 @@ public class Inventory : MonoBehaviour
         AddItem(new Items { itemType = Items.ItemType.Flour, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.Milk, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.Cream, amount = 1 });
-        Debug.Log("Inventory");
     }
 
     public void AddItem(Items item)
     {
         itemList.Add(item);
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public List<Items> GetItemList()

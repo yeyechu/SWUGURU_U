@@ -16,6 +16,20 @@ public class PlayerMove : MonoBehaviour
         //인벤토리
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
+        
+        //아이템 배치
+        ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Items { itemType = Items.ItemType.Egg, amount = 1 });
+    }
+
+    //아이템 먹기
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
+        if(itemWorld != null)
+        {
+            inventory.AddItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
+        }
     }
 
     void Update()
