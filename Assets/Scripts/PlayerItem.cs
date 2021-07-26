@@ -13,12 +13,13 @@ public class PlayerItem : MonoBehaviour
     private void Awake()
     {
         inventory = new Inventory();
-        
+        uiInventory.SetInventory(inventory);
+
+        ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Items { itemType = Items.ItemType.Egg, amount = 1 });
     }
 
     private void Start()
     {
-        uiInventory.SetInventory(inventory);
     }
 
     //æ∆¿Ã≈€ ∏‘±‚
