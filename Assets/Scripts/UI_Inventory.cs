@@ -62,8 +62,8 @@ public class UI_Inventory : MonoBehaviour
                 ItemWorld.DropItem(player.transform.position, item);
             };
 
-
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
+
             //아이템 이미지 불러오기
             Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
             image.sprite = item.GetSprite();
