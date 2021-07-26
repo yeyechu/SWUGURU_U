@@ -43,7 +43,7 @@ public class UI_Inventory : MonoBehaviour
 
         int x = 0;
         int y = 0;
-        float itemSlotCellSize = 30f;
+        float itemSlotCellSize = 100f;
 
         foreach (Items item in inventory.GetItemList())
         {
@@ -66,8 +66,8 @@ public class UI_Inventory : MonoBehaviour
             };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
-            x++;
-            if(x>4)
+            x ++;
+            if(x>5)
             { x = 0;
                 y++;
             }
@@ -75,11 +75,6 @@ public class UI_Inventory : MonoBehaviour
             //아이템 이미지 불러오기
             Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
             image.sprite = item.GetSprite();
-            x+= 5;
-            if(x >= 20)
-            {
-                break;
-            }
         }
     }
 }
