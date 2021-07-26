@@ -79,7 +79,18 @@ public class DogMove : MonoBehaviour
     void Find()
     {
         print("港港");
-        dogState = DogState.Idle;
+        StartCoroutine(Bark());
+        Debug.Log("内风凭 辆丰");
+
+        if (distanceToPlayer > barkRange)
+        {
+            dogState = DogState.Idle;
+        }
     }
 
+    IEnumerator Bark()
+    {
+        Debug.Log("内风凭 角青");
+        yield return new WaitForSeconds(1f);
+    }
 }
