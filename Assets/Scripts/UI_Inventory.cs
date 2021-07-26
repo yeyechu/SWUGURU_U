@@ -10,6 +10,7 @@ public class UI_Inventory : MonoBehaviour
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
     private GameObject player;
+    private Vector3 itemDropPoint;
 
     private void Awake()
     {
@@ -59,7 +60,9 @@ public class UI_Inventory : MonoBehaviour
             itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>
             {
                 inventory.RemoveItem(item);
-                ItemWorld.DropItem(player.transform.position, item);
+                itemDropPoint = player.transform.position;
+                itemDropPoint.x += 1;
+                ItemWorld.DropItem(itemDropPoint, item);
             };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
