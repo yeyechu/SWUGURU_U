@@ -81,4 +81,5 @@ public class DogMove : MonoBehaviour
         print("¸Û¸Û");
         dogState = DogState.Idle;
     }
+
 }
