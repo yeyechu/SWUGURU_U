@@ -9,6 +9,6 @@ public class SceneManager : MonoBehaviour
 
     private void OnMouseDown()
     {
-        //SceneManager.LoadScene(SampleScene);
+        //SceneManager.LoadScene("SampleScene");
     }
 }

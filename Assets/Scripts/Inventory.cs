@@ -23,7 +23,7 @@ public class Inventory
         AddItem(new Items { itemType = Items.ItemType.Firework, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.Balloon, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.Present, amount = 1 });
-        AddItem(new Items { itemType = Items.ItemType.Gun, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.Watch, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.DogSnack, amount = 1 });
     }
 

@@ -63,6 +63,11 @@ public class UI_Inventory : MonoBehaviour
             };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
+            x++;
+            if(x>4)
+            { x = 0;
+                y++;
+            }
 
             //아이템 이미지 불러오기
             Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
