@@ -27,6 +27,11 @@ public class PlayerItem : MonoBehaviour
     //æ∆¿Ã≈€ ∏‘±‚
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        if (inventory.itemList.Count == 5)
+        {
+            return;
+        }
+
         ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
         if (itemWorld != null)
         {
