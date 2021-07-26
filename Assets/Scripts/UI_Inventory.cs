@@ -67,11 +67,10 @@ public class UI_Inventory : MonoBehaviour
             //아이템 이미지 불러오기
             Image image = itemSlotRectTransform.Find("image").GetComponent<Image>();
             image.sprite = item.GetSprite();
-            x++;
-            if(x > 4)
+            x+= 5;
+            if(x >= 20)
             {
-                x = 0;
-                y++;
+                break;
             }
         }
     }

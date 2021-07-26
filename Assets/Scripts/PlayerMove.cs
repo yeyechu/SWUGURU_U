@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] private UI_Inventory uiInventory;
 
-    
+
     private void Start()
     {
         //인벤토리
