@@ -11,26 +11,56 @@ public class DogMove : MonoBehaviour
     public float rangeY = 0.1f;
 
     public GameObject player;
+    float distanceToPlayer;
+    public float barkRange = 1;
+
+    enum DogState
+    {
+        Idle,
+        Move,
+        Find
+    }
+
+    DogState dogState;
 
     // Start is called before the first frame update
     void Start()
     {
+        dogState = DogState.Idle;
         retVector = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+
+        switch (dogState)
+        {
+            case DogState.Idle:
+                Idle();
+                break;
+
+            case DogState.Move:
+                Move();
+                break;
+
+            case DogState.Find:
+                Find();
+                break;
+        }
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    void Idle()
     {
-        print("港港");
-        StartCoroutine(Bark());
+        if (distanceToPlayer <= barkRange)
+        {
+            dogState = DogState.Find;
+        }
     }
 
-    void CircularMove()
+    void Move()
     {
         degree += speed;
         float radian = degree * Mathf.PI / 180;
@@ -39,11 +69,17 @@ public class DogMove : MonoBehaviour
         retVector.y += rangeY * Mathf.Sin(radian);
 
         transform.position = retVector;
+
+        if (distanceToPlayer <= barkRange)
+        {
+            dogState = DogState.Find;
+        }
     }
 
-    IEnumerator Bark()
+    void Find()
     {
-        Debug.Log("内风凭 角青");
-        yield return new WaitForSeconds(1f);
+        print("港港");
+        dogState = DogState.Idle;
     }
+
 }
