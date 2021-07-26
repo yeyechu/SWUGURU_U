@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2230,7 +2230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e57281c12bbcde4b8cac6b7b8a3d5fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: {fileID: 0}
   distanceToPoint: 0
   successRange: 1
   t: 13
@@ -3813,6 +3812,7 @@ GameObject:
   - component: {fileID: 437090447}
   - component: {fileID: 437090444}
   - component: {fileID: 437090445}
+  - component: {fileID: 437090446}
   m_Layer: 8
   m_Name: Dog
   m_TagString: Untagged
@@ -3885,6 +3885,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &437090446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437090443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd02d6676005b84eb123d9a29a4704a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  rangeX: 0.1
+  rangeY: 0.1
+  player: {fileID: 1474975270}
+  barkRange: 1
 --- !u!4 &437090447
 Transform:
   m_ObjectHideFlags: 0
