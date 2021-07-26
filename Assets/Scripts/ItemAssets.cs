@@ -24,6 +24,12 @@ public class ItemAssets : MonoBehaviour
     public Sprite fireworkSprite;
     public Sprite balloonSprite;
     public Sprite presentSprite;
-    public Sprite gunSprite;
+    public Sprite watchSprite;
     public Sprite dogsnackSprite;
+    public Sprite wrapPaperSprite;
+    public Sprite chocolateSprite;
+    public Sprite bowlSprite;
+    public Sprite breadBoardSprite;
+    public Sprite gloveSprite;
+    public Sprite stirSprite;
 }

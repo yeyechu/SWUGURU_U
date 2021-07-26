@@ -2945,7 +2945,6 @@ MonoBehaviour:
   rangeX: 0.1
   rangeY: 0.1
   player: {fileID: 1474975270}
-  barkRange: 1
 --- !u!4 &437090447
 Transform:
   m_ObjectHideFlags: 0
@@ -12784,12 +12783,18 @@ MonoBehaviour:
   creamSprite: {fileID: 21300000, guid: cf4d42a0def264c40a221fc230656eb1, type: 3}
   breadSprite: {fileID: 21300000, guid: 3e5b8013cd5aa7048bdfd481c96d1121, type: 3}
   fruitSprite: {fileID: 21300000, guid: 71eba9124ec5ae241a27d0660b458558, type: 3}
-  spatulaSprite: {fileID: 21300000, guid: 0e11e4b832abdd546add99d7c159615c, type: 3}
-  fireworkSprite: {fileID: 21300000, guid: 0e11e4b832abdd546add99d7c159615c, type: 3}
+  spatulaSprite: {fileID: 21300000, guid: 7456d012d95ef9f458daf801f84e32e2, type: 3}
+  fireworkSprite: {fileID: 21300000, guid: 6b6ac3ba9da508d44bf6c7ae72ef3ada, type: 3}
   balloonSprite: {fileID: 21300000, guid: 53a7624679e42bd419d02dbe87433b4b, type: 3}
   presentSprite: {fileID: 21300000, guid: dc436bdfdc25c0e44b3f8d0d5d2a81c8, type: 3}
-  gunSprite: {fileID: 21300000, guid: 1b2c31173e72ac442b74f22bbd460748, type: 3}
+  watchSprite: {fileID: 21300000, guid: 1b2c31173e72ac442b74f22bbd460748, type: 3}
   dogsnackSprite: {fileID: 21300000, guid: 0f8584ee74f3bec4dbca49fa2c957382, type: 3}
+  wrapPaperSprite: {fileID: 21300000, guid: ab57c7426148fe54990d0fb5097e5ae7, type: 3}
+  chocolateSprite: {fileID: 21300000, guid: 4d3d4b69c6aee4244aa47ae3a7b90231, type: 3}
+  bowlSprite: {fileID: 21300000, guid: 18d583796425241488f29cef9c9d9e06, type: 3}
+  breadBoardSprite: {fileID: 21300000, guid: 6b673b9d0d3ec62459f834732deae65c, type: 3}
+  gloveSprite: {fileID: 21300000, guid: 6cd2e3bfe2c0e314487e9f14204faa91, type: 3}
+  stirSprite: {fileID: 21300000, guid: e80bd46fd775d9747b7bcb74e226e5fe, type: 3}
 --- !u!4 &2126872885
 Transform:
   m_ObjectHideFlags: 0
