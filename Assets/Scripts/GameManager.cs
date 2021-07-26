@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    /*
+    
     public enum GameState
     {
-        Ready, Run, GameOver
+        Ready, Run, GameOver, Pause
     }
 
     public GameState gState;
@@ -18,6 +19,9 @@ public class GameManager : MonoBehaviour
     GameObject player;
     PlayerMove playerM;
 
+    public GameObject optionUI;
+
+    /*
     private void Awake()
     {
         if (gm == null)
@@ -51,9 +55,37 @@ public class GameManager : MonoBehaviour
             stateLabel.color = new Color32(255, 0, 0, 255);
             gState = GameState.GameOver;
         }
+       
     
     }
-    */
+*/
+
+    public void OpenOptionWindow()
+    {
+        gState = GameState.Pause;
+        Time.timeScale = 0;
+        optionUI.SetActive(true);
+    }
+
+    public void CloseOptionWindow()
+    {
+
+        gState = GameState.Run;
+        Time.timeScale = 1.0f;
+        optionUI.SetActive(false);
+    }
+
+    public void GameRestart()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GameQuit()
+    {
+        Application.Quit();
+    }
+    
 }
 /*
    네임스페이스 추가 : using UnityEngine.UI;

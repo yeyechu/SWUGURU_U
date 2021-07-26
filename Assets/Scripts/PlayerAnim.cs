@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PlayerAnim : MonoBehaviour
 {
-
     public string upAnime = "";     // 위 방향 ：Inspector에 지정
     public string downAnime = "";   // 아래 방향：Inspector에 지정
     public string rightAnime = "";  // 오른쪽 방향：Inspector에 지정
     public string leftAnime = "";   // 왼쪽 방향：Inspector에 지정
+    public string IdleAnime = "";
 
     string nowMode = "";
     string oldMode = "";
 
     void Start()// 처음에 시행한다 
     {
-        nowMode = downAnime;
+        nowMode = IdleAnime;
         oldMode = "";
     }
 
@@ -38,6 +38,7 @@ public class PlayerAnim : MonoBehaviour
             nowMode = leftAnime;
         }
     }
+   
     void FixedUpdate() // 계속 시행한다(일정 시간마다)
     {
         // 만약 다른 키가 눌리면 
@@ -49,5 +50,4 @@ public class PlayerAnim : MonoBehaviour
             animator.Play(nowMode);
         }
     }
-
 }
