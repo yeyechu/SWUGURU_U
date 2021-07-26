@@ -12,7 +12,7 @@ public class Inventory
     public Inventory()
     {
         itemList = new List<Items>();
-
+        /*
         AddItem(new Items { itemType = Items.ItemType.Egg, amount  = 1});
         AddItem(new Items { itemType = Items.ItemType.Butter, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.Flour, amount = 1 });
@@ -24,7 +24,7 @@ public class Inventory
         AddItem(new Items { itemType = Items.ItemType.Balloon, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.Present, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.Watch, amount = 1 });
-        AddItem(new Items { itemType = Items.ItemType.DogSnack, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.DogSnack, amount = 1 });*/
     }
 
     public void AddItem(Items item)
