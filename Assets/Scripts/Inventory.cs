@@ -7,7 +7,7 @@ public class Inventory
 {
     public event EventHandler OnItemListChanged;
 
-    private List<Items> itemList;
+    public List<Items> itemList;
 
     public Inventory()
     {
