@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Stage2 : MonoBehaviour
 {
-    public GameObject point;
+    GameObject point;
     public float distanceToPoint;
     public float successRange = 10f;
 
