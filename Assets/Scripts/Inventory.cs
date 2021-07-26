@@ -17,7 +17,14 @@ public class Inventory
         AddItem(new Items { itemType = Items.ItemType.Butter, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.Flour, amount = 1 });
         AddItem(new Items { itemType = Items.ItemType.Milk, amount = 1 });
-        AddItem(new Items { itemType = Items.ItemType.Cream, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.Bread, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.Fruit, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.Spatula, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.Firework, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.Balloon, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.Present, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.Gun, amount = 1 });
+        AddItem(new Items { itemType = Items.ItemType.DogSnack, amount = 1 });
     }
 
     public void AddItem(Items item)
