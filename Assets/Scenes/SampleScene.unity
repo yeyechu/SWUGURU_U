@@ -632,9 +632,9 @@ MonoBehaviour:
   point: {fileID: 0}
   distanceToPoint: 0
   successRange: 1
-  t: 1
-  l: 10
-  posX: 1
+  t: 13
+  l: 16
+  posX: -8
 --- !u!1 &292473884
 GameObject:
   m_ObjectHideFlags: 0

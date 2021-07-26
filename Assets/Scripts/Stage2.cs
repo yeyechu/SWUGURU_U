@@ -22,7 +22,7 @@ public class Stage2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = new Vector3(posX + Mathf.PingPong(t * Time.time, l), 0, 0);
+        Vector3 pos = new Vector3(posX + Mathf.PingPong(t * Time.time, l), 4, 0);
         transform.position = pos;
 
         if (Input.GetButtonDown("Jump"))
