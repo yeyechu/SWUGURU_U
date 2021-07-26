@@ -16,6 +16,8 @@ public class PlayerItem : MonoBehaviour
         uiInventory.SetInventory(inventory);
 
         ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Items { itemType = Items.ItemType.Egg, amount = 1 });
+        ItemWorld.SpawnItemWorld(new Vector3(0, -20), new Items { itemType = Items.ItemType.Butter, amount = 1 });
+        ItemWorld.SpawnItemWorld(new Vector3(-20, -20), new Items { itemType = Items.ItemType.Flour, amount = 1 });
     }
 
     private void Start()
