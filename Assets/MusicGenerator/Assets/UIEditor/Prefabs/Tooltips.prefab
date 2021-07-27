@@ -1,0 +1,323 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &179230509495221528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179230508989550811}
+  - component: {fileID: 179230509495221527}
+  m_Layer: 5
+  m_Name: Tooltips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179230508989550811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179230509495221528}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.556583, y: 0.55405504, z: -623.13873}
+  m_LocalScale: {x: 0.69231874, y: 0.69231874, z: 6.923187}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179230509495221527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179230509495221528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57bacf766a2db4363965651df1072b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mTooltipBase:
+    m_AssetGUID: 77ebb4b246c3140b8af637555c46c56f
+    m_SubObjectName: 
+  mEntries:
+  - Key: Timestep
+    Value: Based on 16 note measures, this is the rate this instrument with try to
+      play. I.e. 1/16 will play 16 times per line. 1/2 will play twice.
+  - Key: Volume
+    Value: The volume of the selected instrument. This is separate from the global
+      volume and only affects this instrument.
+  - Key: NewInstrument
+    Value: 'Adds a new instrument to the arrangement. While this can be done in real
+      time, it''s generally best not to. Use the groups and group rate values if
+      you''d like to have instruments come in and out for different measures. '
+  - Key: Edit
+    Value: Opens the 'Instrument Panel' below, where you're able to edit properties
+      of this instrument.
+  - Key: Mute
+    Value: Mutes the instrument. Notes / themes / patterns and such are still generated,
+      but not played.
+  - Key: Solo
+    Value: Mutes all other instruments but this one.
+  - Key: Delete
+    Value: Deletes the instrument from the arrangement
+  - Key: InstrumentDropdown
+    Value: Selects the 'type' of instrument (i.e. violin, cello, etc). To import
+      new instruments, please see the documentation
+  - Key: Succession
+    Value: Sets whether this instrument is a melody, lead, or rhythm. (rhythm plays
+      100% of the timesteps to which it is set. Selecting melody will play a random
+      chord note and enable other options for 'odds of playing', Lead is similiar
+      to melody, but is not limited to chord notes and can play most notes in the
+      scale. If melody has 100% chord chance, it will always play a full chord.
+  - Key: Lead
+    Value: Only available for melodic instruments. Breaks the possible notes out
+      of the current chord progression and give a much more distinct melody. Will
+      play any note in the generator's selected scale. Will (hopefully) avoid dissonance.
+      Use caution if adding multiple leads.
+  - Key: OddsOfPlaying
+    Value: The Odds of this instrument playing. A random roll against this value
+      each timestep determines whether the note will play.
+  - Key: PlayMultiplier
+    Value: If a note successfully plays, the odds the next note is played are multiplied
+      against this value. (helpful for bunching up groups of notes and reducing how
+      the melody feels. If a note doesn't play, the multiplier doesn't affect the
+      instrument's chance of playing again until a note is successfully played)
+  - Key: OddsOfPlayingChordNote
+    Value: The odds that this instrument will try to play additional chordal notes.
+      If this is a lead instrument, the notes are guaranteed to be chord notes (if
+      set to 100% the instrument kinda ceases to be a lead, as it's always playing
+      chord notes.
+  - Key: OctavesToUse
+    Value: The available ocataves for this instrument. I.e, if 1 and 3 are selected.
+      It will play notes in the first and third octaves for this instrument.
+  - Key: Group
+    Value: A very useful option. Groups have a variable (set in the master panel)
+      for the odds that the instruments in this group will play during any given
+      measure. Decided at the beginning of the measure, this is useful to add dynamics
+      to the overall feel of things. All the instruments set to a group will either
+      play, or not play, for any given measure (random dice roll each measure, based
+      on the value set in the master panel). See also the Group Style dropdown in
+      the advanced settings panel.
+  - Key: Color
+    Value: The color this instrument will display in the instrument list panel and
+      staff player.
+  - Key: StereoPan
+    Value: Distribution of the sound signal to the output speakers (left/right).
+  - Key: Pattern
+    Value: Uses a (random) pattern to play notes every 4th sixteenth step. Only applies
+      to notes with 1/8 and 1/6 timesteps.
+  - Key: Reverb
+    Value: How much reverb is added to an instrument.
+  - Key: RoomSize
+    Value: How large the room is for the reverb variable.
+  - Key: Chorus
+    Value: Adds a chorus effect.
+  - Key: Flanger
+    Value: Adds a flanger effect.
+  - Key: Distortion
+    Value: Applies distortion effect.
+  - Key: Echo
+    Value: The effect strength of the following two values below,
+  - Key: EchoDelay
+    Value: Time in between echos for the Echo effect.
+  - Key: EchoDecay
+    Value: Falloff rate of the echo effect.
+  - Key: Mode
+    Value: Very useful. Sets the mode of all instruments. Gives a much different
+      overall 'feel'. It's the pitch relationship of the scale/root note.
+  - Key: Tempo
+    Value: The rate of notes (1/16 notes) per minute. I.e. a value of 100 will play
+      100 1/16 notes per minute.
+  - Key: MasterVol
+    Value: The Global volume. Affects all instruments/effects.
+  - Key: Scale
+    Value: 'Sets scale for all instruments. To note: Melodic Minor applies to both
+      ascending and descending melodies.'
+  - Key: Key
+    Value: The key all instruments play. Sets the root note of the scale.
+  - Key: KeyChangeOdds
+    Value: At the end of the measure, this is the odds that a new key is chosen (just
+      goes around circle of fifths in varying directions. See the Key Ascd/Dscd slider
+      in the advanced settings panel to adjust odds of which direction).
+  - Key: Theme/Repeat
+    Value: '''Repeat all measures'', will repeat every measure (length set in ''RepeatLength''
+      option).''Use Theme'', will select a measure to use as the ''theme'', and callback
+      theme occasionally, according to the ''Theme Repeat'' variable.'
+  - Key: RepeatLength
+    Value: The lenth of measure to repeat (if repeat is selected). A measure is what's
+      visible in the display panel (16 notes)
+  - Key: NewThemeOdds
+    Value: How often a new theme is selected (based on measures. So 10% wiil give
+      1/10 odds at the beginning of each measure to select the last measure as the
+      new 'theme'
+  - Key: ThemeRepeat
+    Value: How often a theme will repeat (based on measures. 10% will repeat the
+      theme roughly every ten measures
+  - Key: ProgressionRate
+    Value: How quickly the instruments move through chord progressions, A value of
+      4 will move to the next chord progression every 4 1/16 beats. A value of 16
+      will play the entire measure (16 notes) before moving to the next chord in
+      the progression. This changes the overall feel of things quite a bit.
+  - Key: ProgressionChangeOdds
+    Value: The odds that a new chord progression is chosen next measure.
+  - Key: GroupOdds
+    Value: 'How often the instruments set to this group (set in the individual instrument
+      panels) will take part and play during any given Measure. Decided at the beginning
+      of the measure. See also: the Group Style dropdown in the advanced settings
+      panel.'
+  - Key: TonicInfluence
+    Value: The odds that a chord progression will play a tonic chord (1, 3, 6) for
+      the first or second chord in the progression.
+  - Key: SubdominantInfluence
+    Value: The odds that a chord progression will play a subdominant chord (2,4)
+      for the second or third chord in the progression. For the second, it will fall
+      back to the Tonic if this random roll fails. For the third, it will fall to
+      the available dominant chords.
+  - Key: DominantInfluence
+    Value: The odds that a chord progression will play a dominant chord (5,7) for
+      the 3rd or 4th chord in the progression. This will first roll against a subdominant
+      chord if the initial random roll fails, and default to the tonic if both fail.
+  - Key: TritoneSubstitution
+    Value: Odds a dominant chord will play a flat five substitution instead (augmented
+      sixth. Will add 'tension' to the progression).
+  - Key: KeyAscendDescend
+    Value: his value is the odds of whether key changes are more likely to ascened
+      or descend (clockwise or counter-clockwise around the circle of fifths).
+  - Key: TonicSubdominantDominantExcludes
+    Value: If selected, chord progressions will not play that particular chord step
+      during a chord progression. TO NOTE, at least one in each category is required
+      to be unselected.  If you want to exclude the entirety of a category, just
+      lower its odds of playing to zero instead. Also, when changing keys this is
+      disregarded as the chord may be needed to smoothly transition to the new key.
+  - Key: Presets
+    Value: Loads a preset configuration.
+  - Key: UseSevenths
+    Value: Enable Seventh chords instead of only triads. This...is only kinda working
+      right now.
+  - Key: Export
+    Value: Exports the configuration to file with the name set in the input field.
+  - Key: GroupRate
+    Value: Whether new groups are selected at the end of a measure, or the end of
+      a chord progression.
+  - Key: DynamicStyle
+    Value: Whether the groups are rolled randomly or progress from 1 - 4 in a linear
+      up/down fashion. I.e. In a linear fashion in order for group 4 to play, it
+      would have had to progress through the other groups first and all 4 groups
+      will be playing. Random may have group 1 and 4 playing without 2 and 3. for
+      example
+  - Key: StrumLength
+    Value: Length of time between chordal notes. Plays a 'strum' effect. Semi useful
+      for percussion as well.
+  - Key: StrumVariation
+    Value: Length of randomness between strums. If used carefully, adds a bit of
+      human error to the strums.
+  - Key: GlobalVol
+    Value: The Global volume. Affects all instruments/effects.
+  - Key: VolumeFadeRate
+    Value: The rate at which we fade the volume when FadeOut()/FadeIN() is called
+      on the music generator. Test buttons are included below.
+  - Key: MasterCenterFrequency
+    Value: Global ParamEQ center frequency value.
+  - Key: MasterOctaveRange
+    Value: Global ParamEQ octave range value.
+  - Key: MasterFrequencyGain
+    Value: Global ParamEQ frequency gain value.
+  - Key: MasterLowpassCutoffFreq
+    Value: Cutoff frequency for the gloval lowpass effect plugin.
+  - Key: MasterLowpassResonance
+    Value: Resonance value for the global lowpass effect plugin.
+  - Key: MasterHighpassCutoffFreq
+    Value: Cutoff frequency for the gloval highpass effect plugin.
+  - Key: MasterHighpassResonance
+    Value: Resonance value for the global highpass effect plugin.
+  - Key: MasterEchoDelay
+    Value: Global Echo delay value.
+  - Key: MasterEchoDecay
+    Value: Global Echo decay value.
+  - Key: MasterEchoDry
+    Value: Dry value for the global echo effect.
+  - Key: MasterEchoWet
+    Value: Wet value for the global echo effect.
+  - Key: MasterNumEchoChannels
+    Value: Number of channels for the global echo effect.
+  - Key: MasterReverb
+    Value: Global reverb value.
+  - Key: MasterRoomSize
+    Value: Global room size value for reverb.
+  - Key: MasterReverbDecay
+    Value: Global reverb decay value.
+  - Key: MasterDistortion
+    Value: Global distortion value.
+  - Key: CurrentEditorMeasure
+    Value: The currently displayed measure to edit notes/clips for exporting.
+  - Key: PlayClipDropdown
+    Value: Plays the selected clip
+  - Key: ShowEditorHints
+    Value: Shows reccomended note options for the editor.
+  - Key: ShowAllInstruments
+    Value: Shows the clip notes for all editor instruments.
+  - Key: NumberOfMeasures
+    Value: Sets how many measures to enable for this clip.
+  - Key: Arpeggio
+    Value: Similar to the strum feature. This will pluck out the chord notes individually
+      in a randomized pattern each step.
+  - Key: LeadMaxSteps
+    Value: This value is the greatest scale-step a lead instrument can take in a
+      single step.
+  - Key: ClipRepeat
+    Value: Whether or not this clip will export as a repeating or single clip.
+  - Key: AsyncLoading
+    Value: Whether we'll load assets asynchronously. If you plan on loading new configurations
+      mid-level and have smaller ram requirements, this is the smoother option for
+      framerates but will take longer to load. Otherwise, load the config at level
+      or app start (if you have plenty of memory overhead, feel free to pre-load
+      instruments for multiple configurations by using MusicGenerator.LoadBaseClips()
+      for each instrument you'll need during the level. This drastically cuts down
+      the time to switch songs, at the expense of longer load times to load in the
+      music assets and the memory needed for them. This is used more for testing
+      in the music editor here than ensuring this config will load asynchronously.
+      Set via code before loading if you want async loading in your app.
+  - Key: PatternLength
+    Value: Length of the pattern (in 16th notes). I.e. If your timestep is 1/16 and
+      the pattern length is 4, it will repeat a pattern of the first four notes that
+      play. If it's set to 1/8, it will repeat a pattern of the first two notes that
+      play. It's the highest possible length of notes that could play.
+  - Key: PatternRelease
+    Value: Number of steps from the end of the measure we stop playing the pattern.
+      Used to create a sense of callback to the pattern, or add resolution.
+  - Key: LeadVariation
+    Value: This value determines whether the instrument's melody is likely to continue
+      ascending or descending. A value of 0 will randomly ascend/descend while a
+      value of 100 will continue whatever pattern the first two notes create (so
+      if the first two ascend, it will always ascend.
+  - Key: ChordProgressionDisplay
+    Value: This is the current chord progression and current chord step. So {1,2,3,4},
+      2  is playing a chord progression I_II_III_IV and is currently playing the
+      second chord in that progression.
+  - Key: MixerGroupVolume
+    Value: This is the volume slider for the audio mixer group that this instrument
+      is assigned to. Use as a last resort if the instrument volume and master volume
+      aren't able to get the instrument within an acceptable range.
+  - Key: PentatonicLead
+    Value: 'This toggles whether the lead instrument will use the pentatonic scale.
+      See: https://en.wikipedia.org/wiki/Pentatonic_scale.'
+  - Key: PentatonicAvoids
+    Value: 'This allows you to avoid specific notes of the scale for this instrument
+      to set custom pentatonic scales. See: https://en.wikipedia.org/wiki/Pentatonic_scale.'
+  - Key: TimeSignature
+    Value: 'Beats per measure
+
+      See: https://en.wikipedia.org/wiki/Time_signature'
+  - Key: NumberOfEditorMeasures
+    Value: Number of measures to edit.
+  - Key: Leitmotif
+    Value: Whether this instrument should use the set leitmotif notes.
+  mTooltipCanvas: {fileID: 0}
+  mTooltipsObjects: []

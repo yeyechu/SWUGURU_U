@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: PMGUIEditor
+  m_EditorClassIdentifier: 
+  m_GroupName: PMGUIEditor
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 62bd402ca43879627a3d96b9e0a018c1
+  m_SerializeEntries:
+  - m_GUID: 130137ede7592adf586ecf9318923267
+    m_Address: DefaultFallingNote
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 17acef94451ae8c8d88f77580f3175e6
+    m_Address: LeitmotifPercussionEditorInstrument
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 2e73479f67dc91df4bd400ef29e06b7d
+    m_Address: MeasureEditorNote
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3357f3ad7a1134216a26a99d8bb8a1c2
+    m_Address: MeasureEditorHintNote
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 42baaf7e864d9ada080e6cadb36b09a8
+    m_Address: KeyboardPercussionInstrument
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 46dacf81730bd5a61aea9a1fe85e524d
+    m_Address: VisualizerBar
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 64f328f4ceecaeb13883fd873df43755
+    m_Address: Assets/MusicGenerator/Assets/UIEditor/Prefabs/UISliderDivider.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 77ebb4b246c3140b8af637555c46c56f
+    m_Address: TooltipBase
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a550869502c0aafb08c0cec6b1bc03ad
+    m_Address: Assets/MusicGenerator/Assets/UIEditor/Materials/ParticleMaterials/Fire.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: a876245ef47c568ff8021d8efd62fba5
+    m_Address: FireNote
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b8b15315bd8fe460ab57ae39f082fdcd
+    m_Address: UIInstrument
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bd1e8171fd63772129140cbf9084fb0f
+    m_Address: UIFallingNote
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: d63438e1007d84508bbac9395318f81e
+    m_Address: PercussionEditorInstrument
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: ed30c49afbbf57dcabf27afb5e1c98d7
+    m_Address: PercussionNote
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6fe7a383a6a777ac2ad28141b31c79fe, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b7bf0b2a64f365f3e8478a61570db2ce, type: 2}
+    - {fileID: 11400000, guid: c05fe17f0d6057f26bc3aef9ab8c9d94, type: 2}

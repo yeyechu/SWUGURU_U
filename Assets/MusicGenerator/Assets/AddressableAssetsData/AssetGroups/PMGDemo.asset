@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: PMGDemo
+  m_EditorClassIdentifier: 
+  m_GroupName: PMGDemo
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f84f72b72d0b9c7d094b76cce877673c
+  m_SerializeEntries:
+  - m_GUID: b07b83a54f3613ef5a4b192ccdfe868f
+    m_Address: DemoSpawn
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1889478128948410374, guid: b07b83a54f3613ef5a4b192ccdfe868f,
+      type: 3}
+    m_TargetAsset: {fileID: 1889478128948410374, guid: b07b83a54f3613ef5a4b192ccdfe868f,
+      type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6fe7a383a6a777ac2ad28141b31c79fe, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 55d9362a58838a0e9874761ba3fd9f01, type: 2}
+    - {fileID: 11400000, guid: 56753076a7a3b8a3780796bbb9009a6e, type: 2}
