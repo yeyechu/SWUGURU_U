@@ -98,7 +98,7 @@ public class DogMove : MonoBehaviour
     {
         float disToDoghouse = Vector3.Distance(transform.position, doghouse.transform.position);
 
-        if (disTodoghouse < 0.1)
+        if (disToDoghouse < 0.1)
         {
             Vector3 dirToDoghouse = doghouse.transform.position - transform.position;
             dirToDoghouse.Normalize();
