@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,24 +16,21 @@ public class DogMove : MonoBehaviour
     bool isTouching = false;
 
     public GameObject doghouse;
-
-    public class Dog
+    public enum DogState
     {
-        public enum DogState
-        {
             Idle,
             Move,
             GetSnack
-        }
     }
+  
 
-    public Dog.DogState dogState;
+    public DogState dogState;
 
     // Start is called before the first frame update
     void Start()
     {
         retVector = transform.position;
-        dogState = Dog.DogState.Idle;
+        dogState = DogState.Idle;
     }
 
     // Update is called once per frame
@@ -41,21 +38,21 @@ public class DogMove : MonoBehaviour
     {
         switch (dogState)
         {
-            case Dog.DogState.Idle:
+            case DogState.Idle:
                 Idle();
                 break;
 
-            case Dog.DogState.Move:
+            case DogState.Move:
                 Move();
                 break;
 
-            case Dog.DogState.GetSnack:
+            case DogState.GetSnack:
                 GetSnack();
                 break;
         }
     }
 
-    void Idle()
+    public void Idle()
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
@@ -71,7 +68,7 @@ public class DogMove : MonoBehaviour
         }
     }
 
-    void Move()
+    public void Move()
     {
         distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
@@ -97,11 +94,11 @@ public class DogMove : MonoBehaviour
         transform.position = retVector;
     }
 
-    void GetSnack()
+    public void GetSnack()
     {
         float disTodoghouse = Vector3.Distance(transform.position, doghouse.transform.position);
 
-        if (disToDoghouse < 0.1)
+        if (disTodoghouse < 0.1)
         {
             Vector3 dirToDoghouse = doghouse.transform.position - transform.position;
             dirToDoghouse.Normalize();
@@ -110,7 +107,7 @@ public class DogMove : MonoBehaviour
         else
         {
             transform.position = doghouse.transform.position;
-            dogState = Dog.DogState.Idle;
+            dogState = DogState.Idle;
         }
     }
 
@@ -129,6 +126,6 @@ public class DogMove : MonoBehaviour
     IEnumerator Bark()
     {
         print("¸Û¸Û");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.0f);
     }
-}*/
+}
