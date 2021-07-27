@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -52,10 +52,8 @@ public class PlayerItem : MonoBehaviour
             case Items.ItemType.DogSnack:
                 inventory.RemoveItem(item);
                 //inventory.RemoveItem(new Items { itemType = Items.ItemType.DogSnack, amount = 1 });
-                Vector3 point = transform.position;
-                point.y -= 2;
-                ItemWorld.DropItem(point, item);
+                Dog.dogState = Dog.DogState.GetSnack;
                 break;
         }
     }
-}
+}*/
