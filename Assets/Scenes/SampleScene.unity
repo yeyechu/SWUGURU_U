@@ -3050,9 +3050,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  rangeX: 0.1
-  rangeY: 0.1
+  rangeX: -0.05
+  rangeY: -0.05
   player: {fileID: 1474975270}
+  collider2D: {fileID: 437090444}
+  isTouching: 0
 --- !u!4 &437090447
 Transform:
   m_ObjectHideFlags: 0
@@ -3061,7 +3063,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437090443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.1, y: 2.64, z: 0}
+  m_LocalPosition: {x: -16.37, y: 4.91, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8570,6 +8572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc06c159b03fefa4aab7e808dbfdb0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
 --- !u!114 &1474975272
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,39 +13,37 @@ public class DogMove : MonoBehaviour
     public GameObject player;
     Collider2D collider2D;
     float distanceToPlayer;
+    bool isTouching = false;
 
     // Start is called before the first frame update
     void Start()
     {
         retVector = transform.position;
-        collider2D = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Move();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        print("港港");
-        StartCoroutine(Bark());
-        distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        if (distanceToPlayer > 5)
-        {
-            return;
-        }
-    }
-
-    IEnumerator Bark()
-    {
-        yield return new WaitForSeconds(1f);
-        Debug.Log("内风凭 角青凳");
+        Move();
     }
 
     void Move()
     {
+        distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+
+        if (isTouching)
+        {
+            if (distanceToPlayer <= 5)
+            {
+                return;
+            }
+
+            //Debug.Log("面倒皑瘤");
+            
+            OnTriggerEnter2D(collider2D);
+            return;
+        }
+
         degree += speed;
         float radian = degree * Mathf.PI / 180;
 
@@ -53,5 +51,23 @@ public class DogMove : MonoBehaviour
         retVector.y += rangeY * Mathf.Sin(radian);
 
         transform.position = retVector;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        isTouching = true;
+        if (distanceToPlayer > 5)
+        {
+            Debug.Log("哈绢巢");
+            isTouching = false;
+            return;
+        }
+        StartCoroutine(Bark());
+    }
+
+    IEnumerator Bark()
+    {
+        print("港港");
+        yield return new WaitForSeconds(1f);
     }
 }

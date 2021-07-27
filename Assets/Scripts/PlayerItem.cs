@@ -10,7 +10,7 @@ public class PlayerItem : MonoBehaviour
 
     [SerializeField] private UI_Inventory uiInventory;
 
-    private void Awake()
+    private void Start()
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
@@ -18,10 +18,6 @@ public class PlayerItem : MonoBehaviour
         ItemWorld.SpawnItemWorld(new Vector3(20, 20), new Items { itemType = Items.ItemType.Egg, amount = 1 });
         ItemWorld.SpawnItemWorld(new Vector3(0, -20), new Items { itemType = Items.ItemType.Butter, amount = 1 });
         ItemWorld.SpawnItemWorld(new Vector3(-20, -20), new Items { itemType = Items.ItemType.Flour, amount = 1 });
-    }
-
-    private void Start()
-    {
     }
 
     //æ∆¿Ã≈€ ∏‘±‚

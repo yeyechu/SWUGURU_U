@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    float speed = 5;
+    public float speed = 5;
     Animator anim;
 
     private void Start()
@@ -15,8 +15,8 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
 
         Vector3 dir = new Vector3(h, v, 0);
 
