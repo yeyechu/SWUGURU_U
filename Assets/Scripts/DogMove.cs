@@ -11,7 +11,7 @@ public class DogMove : MonoBehaviour
     public float rangeY = 0.1f;
 
     public GameObject player;
-    Collider2D collider2D;
+    new Collider2D collider2D;
     float distanceToPlayer;
     bool isTouching = false;
 
@@ -96,7 +96,7 @@ public class DogMove : MonoBehaviour
 
     public void GetSnack()
     {
-        float disTodoghouse = Vector3.Distance(transform.position, doghouse.transform.position);
+        float disToDoghouse = Vector3.Distance(transform.position, doghouse.transform.position);
 
         if (disTodoghouse < 0.1)
         {
