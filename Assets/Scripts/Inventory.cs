@@ -8,9 +8,11 @@ public class Inventory
     public event EventHandler OnItemListChanged;
 
     public List<Items> itemList;
+    private Action<Items> useItemAction;
 
-    public Inventory()
+    public Inventory(Action<Items> useItemAction)
     {
+        this.useItemAction = useItemAction;
         itemList = new List<Items>();
         /*
         AddItem(new Items { itemType = Items.ItemType.Egg, amount  = 1});
@@ -31,6 +33,11 @@ public class Inventory
     {
         itemList.Add(item);
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void UseItem(Items item)
+    {
+        useItemAction(item);
     }
 
     public void RemoveItem(Items item)

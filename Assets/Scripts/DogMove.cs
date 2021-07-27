@@ -58,7 +58,7 @@ public class DogMove : MonoBehaviour
         isTouching = true;
         if (distanceToPlayer > 5)
         {
-            Debug.Log("¹þ¾î³²");
+            //Debug.Log("¹þ¾î³²");
             isTouching = false;
             return;
         }

@@ -51,17 +51,18 @@ public class UI_Inventory : MonoBehaviour
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
-            /*아이템사용
+            //아이템사용
             itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
+                inventory.UseItem(item);
+            };
 
-            };*/
             //우클릭시 아이템버리기
             itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>
             {
                 inventory.RemoveItem(item);
                 itemDropPoint = player.transform.position;
-                itemDropPoint.x += 1;
+                itemDropPoint.x += 2;
                 ItemWorld.DropItem(itemDropPoint, item);
             };
 

@@ -14,7 +14,7 @@ public class OutOfRoom : MonoBehaviour
         player = GameObject.Find("Player");
     }
 
-    private void OnTriggerEnter2D(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         //검은 화면으로 변하는 애니메이션
         print("충돌");
