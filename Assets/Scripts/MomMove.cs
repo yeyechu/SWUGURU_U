@@ -8,6 +8,7 @@ public class MomMove : MonoBehaviour
     {
         Idle,
         Move,
+        Return,
         Detect
     }
 
@@ -17,6 +18,8 @@ public class MomMove : MonoBehaviour
 
     public Transform Target1;
     public Transform Target2;
+
+
 
     public float findDistance = 2f;
 
@@ -37,7 +40,6 @@ public class MomMove : MonoBehaviour
         //플레이어 
         player = GameObject.Find("Player");
 
-
     }
 
     // Update is called once per frame
@@ -53,6 +55,10 @@ public class MomMove : MonoBehaviour
                 Move();
                 break;
 
+            case MomState.Return:
+                Return();
+                break;
+
             case MomState.Detect:
                 Detect();
                 break;
@@ -66,25 +72,43 @@ public class MomMove : MonoBehaviour
 
         if (currentTime >= MoveTime)
         {
+            currentTime = 0;
             momState = MomState.Move;
             print("Idle -> move");
-            currentTime = 0;
         }
     }
 
     void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Target1.transform.position, moveSpeed * Time.deltaTime);
-
-        if (Vector3.Distance(player.transform.position, transform.position) <= findDistance)
+        transform.position = Vector3.MoveTowards(transform.position, Target1.position, moveSpeed * Time.deltaTime);
+        if(Vector3.Distance(Target1.position, transform.position) == 0)
         {
+            StartCoroutine(Waiting());
+            if (Vector3.Distance(player.transform.position, transform.position) <= findDistance)
+            {
 
-            momState = MomState.Detect;
+                momState = MomState.Detect;
+            }
+
+            else
+            {
+                momState = MomState.Return;
+                print("무브에서 리턴");
+
+            }
         }
 
-        else
+    }
+
+    void Return()
+    {
+        StartCoroutine(Waiting());
+
+        transform.position = Vector3.MoveTowards(transform.position, Target2.transform.position, moveSpeed * Time.deltaTime);
+        if (Vector3.Distance(Target2.position, transform.position) == 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Target2.transform.position, moveSpeed * Time.deltaTime);
+            print("리턴에서 아이들");
+            momState = MomState.Idle;
         }
     }
 
@@ -102,7 +126,7 @@ public class MomMove : MonoBehaviour
 
     IEnumerator Waiting()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(5f);
     }
 
 }
