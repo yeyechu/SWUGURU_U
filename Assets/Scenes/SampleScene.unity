@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 49112122}
   - component: {fileID: 49112121}
   m_Layer: 0
-  m_Name: oven-1 1
+  m_Name: Oven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,12 +389,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49112120}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.26, y: 3.66, z: -0.3}
-  m_LocalScale: {x: 0.297027, y: 0.297027, z: 0.297027}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.35533336, y: 0.266, z: -0.3}
+  m_LocalScale: {x: 0.019801801, y: 0.029702699, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 1132690348}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &92616408
 GameObject:
@@ -6745,6 +6745,8 @@ Transform:
   - {fileID: 1443082071}
   - {fileID: 1030392327}
   - {fileID: 1125096763}
+  - {fileID: 49112123}
+  - {fileID: 1969774353}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9330,8 +9332,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557468678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.12, y: 8.23, z: -15.010191}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7.3, y: 7.02, z: -15.010191}
+  m_LocalScale: {x: 0.55757, y: 0.55757, z: 0.55757}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -12165,7 +12167,7 @@ GameObject:
   - component: {fileID: 1969774352}
   - component: {fileID: 1969774351}
   m_Layer: 0
-  m_Name: refridgerator
+  m_Name: Refridgerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12255,12 +12257,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969774350}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.32, y: 3.94, z: -0.3}
-  m_LocalScale: {x: 0.39097407, y: 0.39097407, z: 0.39097407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.418, y: 0.294, z: -0.3}
+  m_LocalScale: {x: 0.02606494, y: 0.03909741, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 1132690348}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1974450512
 GameObject:
