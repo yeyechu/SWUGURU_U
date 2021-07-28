@@ -24,7 +24,7 @@ public class DogMove : MonoBehaviour
     }
   
 
-    public DogState dogState;
+    public static DogState dogState;
 
     // Start is called before the first frame update
     void Start()
@@ -107,7 +107,7 @@ public class DogMove : MonoBehaviour
         else
         {
             transform.position = doghouse.transform.position;
-            dogState = DogState.Idle;
+            return;
         }
     }
 
