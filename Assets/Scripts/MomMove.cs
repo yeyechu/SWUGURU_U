@@ -14,17 +14,18 @@ public class MomMove : MonoBehaviour
     MomState momState;
 
     GameObject player;
-    public Transform Target;
 
-    public float findDistance = 5f;
+    public Transform Target1;
+    public Transform Target2;
 
-    public float moveSpeed = 5;
+    public float findDistance = 2f;
+
+    public float moveSpeed = 10;
 
     float currentTime = 0;
 
-    public float MoveTime = 10f;
+    public float MoveTime = 0.2f;
 
-    float DetectTime = 100f;
 
 
 
@@ -61,44 +62,47 @@ public class MomMove : MonoBehaviour
 
     void Idle()
     {
-        if (currentTime < MoveTime)
+        currentTime += Time.deltaTime;
+
+        if (currentTime >= MoveTime)
         {
             momState = MomState.Move;
             print("Idle -> move");
             currentTime = 0;
         }
-        else
-        {
-            currentTime += Time.deltaTime;
-        }
     }
 
     void Move()
     {
+        transform.position = Vector3.MoveTowards(transform.position, Target1.transform.position, moveSpeed * Time.deltaTime);
 
         if (Vector3.Distance(player.transform.position, transform.position) <= findDistance)
         {
+
             momState = MomState.Detect;
-            print("무브에서 디텍트");
         }
 
-        if (Vector3.Distance(player.transform.position, transform.position) > findDistance)
+        else
         {
-            transform.position = Vector3.MoveTowards(transform.position, Target.position, moveSpeed * Time.deltaTime);
-
-
+            transform.position = Vector3.MoveTowards(transform.position, Target2.transform.position, moveSpeed * Time.deltaTime);
         }
     }
 
     void Detect()
     {
-        print("하트 하나 감소");
+        StartCoroutine(Waiting());
+        //애니메이션
         momState = MomState.Idle;
         print("무브에서 아이들");
         player.transform.position = new Vector3(0, 0, 0);
-        transform.position = new Vector3(-33, 3, 0);
+        transform.position = Target2.transform.position;
         //하트감소UI
+        print("하트 하나 감소");
     }
 
+    IEnumerator Waiting()
+    {
+        yield return new WaitForSeconds(0.1f);
+    }
 
 }
